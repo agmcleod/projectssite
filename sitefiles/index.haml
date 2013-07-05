@@ -1,0 +1,13 @@
+%h1 Projects
+
+- projects = Project.all
+
+.row
+  - projects.each do |project|
+    .span4
+      %h2
+        %a{ href: project.url }= project.name
+      - if project.description?
+        %p
+          = project.description
+          %pre= project.instructions
