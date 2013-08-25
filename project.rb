@@ -9,8 +9,9 @@ class Project
         {name: 'Badass Stickman', url: '/badass-stickman.zip', description: 'Unzip the file, and run via command line', instructions: 'java -jar badass-stickman.jar'},
         {name: 'LudumDare 26', url: '/ld26.zip', description: 'Unzip the file, and run via command line', instructions: 'java -jar ld26.jar'},
         {name: 'TO Jam - Block the enemy', url: '/blocktheenemy.zip', description: 'Unzip the file, and run via command line', instructions: 'java -jar blocktheenemy.jar'},
-        {name: 'Ultimate Roadie', url: '/ultimate-roadie'}
-      ].collect do |vars|
+        {name: 'Ultimate Roadie', url: '/ultimate-roadie'},
+        {name: 'LD27 - The limits of light', url: '/ld27'}
+      ].reverse.collect do |vars|
         Project.new vars
       end
     end
