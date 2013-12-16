@@ -10,4 +10,5 @@
       - if project.description?
         %p
           = project.description
-          %pre= project.instructions
+          - if project.instructions?
+            %pre= project.instructions

@@ -13,7 +13,7 @@ class Project
         {name: 'LD27 - The limits of light', url: '/ld27', description: "Collection game I made for Ludum Dare 28. The key is the game is constantly dark. But you can trigger a flicker light for a few seconds to see your way."},
         {name: '7 Day FPS 2013', url: '/7dfps2013', description: "Tried making something with Three.JS. Didn't get too far, but it was fun!"},
         {name: 'Snowball Effect', url: '/snowballeffect', description: "You are a snowball. Run into things to get bigger and crush the skiing chalet."},
-        {name: 'Navigate - a mobile device motion demo', url: '/navigate'},
+        {name: 'Navigate - a mobile device motion demo', url: '/navigate', description: "Small example using device motion. Try it on your phone. Be sure to rotate it so the top of your phone is in your left hand, bottom in your right."},
         {name: 'Github Gameoff 2013 (un-naed)', url: '/github-gameoff-2013', description: "Started on a simple platformer for the github gameoff contest. Idea was to change through different forms to accomplish different tasks. WASD and tab for controls."}
       ].reverse.collect do |vars|
         Project.new vars
@@ -29,5 +29,9 @@ class Project
 
   def description?
     !description.nil? && description != ''
+  end
+
+  def instructions?
+    !instructions.nil? && instructions != ''
   end
 end
