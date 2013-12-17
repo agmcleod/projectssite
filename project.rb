@@ -14,7 +14,8 @@ class Project
         {name: '7 Day FPS 2013', url: '/7dfps2013', description: "Tried making something with Three.JS. Didn't get too far, but it was fun!"},
         {name: 'Snowball Effect', url: '/snowballeffect', description: "You are a snowball. Run into things to get bigger and crush the skiing chalet."},
         {name: 'Navigate - a mobile device motion demo', url: '/navigate', description: "Small example using device motion. Try it on your phone. Be sure to rotate it so the top of your phone is in your left hand, bottom in your right."},
-        {name: 'Github Gameoff 2013 (un-named project)', url: '/github-gameoff-2013', description: "Started on a simple platformer for the github gameoff contest. Idea was to change through different forms to accomplish different tasks. WASD and tab for controls."}
+        {name: 'Github Gameoff 2013 (un-named project)', url: '/github-gameoff-2013', description: "Started on a simple platformer for the github gameoff contest. Idea was to change through different forms to accomplish different tasks. WASD and tab for controls."},
+        {name: 'LD28 - Perfect Christmas', url: '/ld28', description: "Still in progress, but the game is meant to be an interactive christmas card to my family." }
       ].reverse.collect do |vars|
         Project.new vars
       end
