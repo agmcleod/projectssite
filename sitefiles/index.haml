@@ -3,12 +3,14 @@
 - projects = Project.all
 
 .row
-  - projects.each do |project|
-    .span4
-      %h2
-        %a.project-link{ href: project.url }= project.name
-      - if project.description?
-        %p
-          = project.description
-          - if project.instructions?
-            %pre= project.instructions
+- projects.each_slice(3) do |projects_slice|
+  .row
+    - projects_slice.each do |project|
+      .span4
+        %h2
+          %a.project-link{ href: project.url }= project.name
+        - if project.description?
+          %p
+            = project.description
+            - if project.instructions?
+              %pre= project.instructions

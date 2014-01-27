@@ -15,7 +15,8 @@ class Project
         {name: 'Snowball Effect', url: '/snowballeffect', description: "You are a snowball. Run into things to get bigger and crush the skiing chalet."},
         {name: 'Navigate - a mobile device motion demo', url: '/navigate', description: "Small example using device motion. Try it on your phone. Be sure to rotate it so the top of your phone is in your left hand, bottom in your right."},
         {name: 'Github Gameoff 2013 (un-named project)', url: '/github-gameoff-2013', description: "Started on a simple platformer for the github gameoff contest. Idea was to change through different forms to accomplish different tasks. WASD and tab for controls."},
-        {name: 'LD28 - Perfect Christmas', url: '/ld28', description: "Still in progress, but the game is meant to be an interactive christmas card to my family." }
+        {name: 'LD28 - Perfect Christmas', url: '/ld28', description: "An interactive christmas card to my family." },
+        {name: 'GGJ 2014 - Keepsake', url: '/ggj2014.jar', description: "A visual novel I worked on with a few others for global game jam 2014."}
       ].reverse.collect do |vars|
         Project.new vars
       end
