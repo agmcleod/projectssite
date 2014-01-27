@@ -1,0 +1,12 @@
+.row {
+  margin-top:2%;
+}
+
+@media screen and (max-width: 500px) {
+  .row {
+    margin-top:0;
+  }
+  .project {
+    margin-top:2%;
+  }
+}
