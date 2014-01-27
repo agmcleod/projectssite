@@ -5,8 +5,11 @@
 .row
 - projects.each_slice(3) do |projects_slice|
   .row
-    - projects_slice.each do |project|
-      .span4
+    - projects_slice.each_with_index do |project, i|
+      .project.span4
+        - if project.image?
+          %a.project-link{ href: project.url }
+            %img{ src: "images/#{project.image}", alt: project.name }
         %h2
           %a.project-link{ href: project.url }= project.name
         - if project.description?
