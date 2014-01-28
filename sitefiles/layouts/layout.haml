@@ -19,11 +19,11 @@
         ga('create', 'UA-11105955-3', 'agmprojects.com');
         ga('send', 'pageview');
 
-      </script>
-      $(document).ready(function() {
-        $('.project-link').on('click', function() {
-          ga('send', 'event', 'project', $(this).attr('href'));
+        $(document).ready(function() {
+          $('.project-link').on('click', function() {
+            ga('send', 'event', 'project', $(this).attr('href'));
+          });
         });
-      });
+      </script>
   %body
     .container= yield
