@@ -1,11 +1,14 @@
 require 'yaml'
+require 'active_support/inflector'
 
 class Project
-  attr_accessor :description, :image, :instructions, :name, :url
+  attr_accessor :description, :full_description, :full_page, :image, :instructions, :name, :screenshots, :url, :youtube_id
 
   class << self
     def all
-      YAML.load(IO.read('data.yml')).collect do |vars|
+      return @data if @data
+      data = YAML.load(IO.read('data.yml'))
+      @data = data.collect do |vars|
         Project.new vars
       end
     end
@@ -15,10 +18,18 @@ class Project
     attrs.each do |k, v|
       send("#{k}=".to_sym, v)
     end
+
+    if self.full_page.nil?
+      self.full_page = false
+    end
   end
 
   def description?
     !description.nil? && description != ''
+  end
+
+  def full_page?
+    full_page
   end
 
   def image?
@@ -27,5 +38,9 @@ class Project
 
   def instructions?
     !instructions.nil? && instructions != ''
+  end
+
+  def slug
+    "/project/#{ActiveSupport::Inflector.parameterize(name)}"
   end
 end

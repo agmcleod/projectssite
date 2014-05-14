@@ -8,14 +8,20 @@ task :build do
 
   layout_file = File.read("sitefiles/layouts/layout.haml")
 
-  Dir['sitefiles/*.haml'].each do |file|
-    rendered_html = Haml::Engine.new(layout_file).render do
-      Haml::Engine.new(File.read(file)).render
-    end
-    File.open("build/#{file.gsub('sitefiles/', '').gsub('haml','html')}", 'w+') do |f|
-      f.write(rendered_html)
+  rendered_html = Haml::Engine.new(layout_file).render do
+    Haml::Engine.new(File.read('sitefiles/index.haml')).render
+  end
+
+  File.open("build/#{index.html}", "w+") do |f|
+    f.write rendered_html
+  end
+
+  Project.all.each do |project|
+    if project.full_page?
+
     end
   end
+
   FileUtils.cp_r('sitefiles/images', 'build')
   FileUtils.cp_r('sitefiles/javascripts', 'build')
   FileUtils.cp_r('sitefiles/stylesheets', 'build')
