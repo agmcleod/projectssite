@@ -1,6 +1,6 @@
 # My projects site
 
-This little app/repo is used for generating my projects site: http://projects.agmprojects.com. It uses a YAML file in the root of the app, and the rake task `rake build` to generate the static output. You're welcome to use the code here for your own, but I ask that you remove things that I have yet to standardize or move into a config file.
+This little app/repo is used for generating my projects site: http://projects.agmprojects.com. It uses a YAML file in the root of the app, and the rake task `rake build` to generate the static output. You're welcome to use the code here for your own, but I ask that you remove things that I have yet to standardize or move into a config file. It may just be better to reference my rake file on how i'm building it, and maybe the structure if you like it :)
 
 Such as:
 
