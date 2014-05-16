@@ -11,10 +11,10 @@
     - projects_slice.each_with_index do |project, i|
       .project.span4
         - if project.image?
-          %a.project-link{ href: project.url }
+          %a{ href: project.full_page? ? project.slug : project.url, class: project.download? ? 'project-link' : '' }
             %img{ src: "images/#{project.image}", alt: project.name }
         %h2
-          %a.project-link{ href: project.url }= project.name
+          %a{ href: project.full_page? ? project.slug : project.url, class: project.download? ? 'project-link' : '' }= project.name
         - if project.description?
           %p
             = project.description

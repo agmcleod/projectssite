@@ -2,7 +2,7 @@ require 'yaml'
 require 'active_support/inflector'
 
 class Project
-  attr_accessor :description, :full_description, :full_page, :image, :instructions, :name, :screenshots, :url, :youtube_id
+  attr_accessor :description, :download, :full_description, :full_page, :image, :instructions, :name, :platforms, :screenshots, :url, :youtube_id
 
   class << self
     def all
@@ -28,6 +28,10 @@ class Project
     !description.nil? && description != ''
   end
 
+  def download?
+    download
+  end
+
   def full_page?
     full_page
   end
@@ -41,6 +45,6 @@ class Project
   end
 
   def slug
-    "/project/#{ActiveSupport::Inflector.parameterize(name)}"
+    "project/#{ActiveSupport::Inflector.parameterize(name)}"
   end
 end

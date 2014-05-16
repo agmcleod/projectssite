@@ -10,3 +10,18 @@
     margin-top:2%;
   }
 }
+
+.projectpage {
+  max-width:960px;
+  width:100%;
+  margin:0 auto;
+}
+
+.projectpage h1 {
+  margin: 0.9em 0;
+}
+
+.projectpage img.main {
+  max-width: 700px;
+  margin-bottom: 20px;
+}
