@@ -2,6 +2,10 @@
   margin-top:2%;
 }
 
+.play {
+  font-size:1.7em;
+}
+
 @media screen and (max-width: 500px) {
   .row {
     margin-top:0;

@@ -1,0 +1,19 @@
+.projectpage
+  %h1= name
+
+  %p.play
+    %strong
+      %a{ href: url , class: download? ? 'project-link' : '' } Play
+
+  - unless instructions.nil?
+    %p.instructions= instructions
+
+  %img.main{ src: "/images/#{image}", alt: name }
+
+  .info
+    %ul
+      %li
+        %strong Platforms:
+        = platforms.join(", ")
+
+  %p= full_description
