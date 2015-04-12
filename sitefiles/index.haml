@@ -1,4 +1,6 @@
-%h1 Projects
+%h1 AGMProjects
+
+%p The following are game projects available to play that I have worked on.
 
 %p
   %a{ href: 'http://agmprojects.com' } Blog
@@ -23,3 +25,9 @@
       %h4 Challenges
       - project.challenges.each do |c|
         %p= c
+
+    - if project.credits
+      %h4 Credits
+      %ul
+        - project.credits.each do |row|
+          %li= row

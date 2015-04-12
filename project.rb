@@ -2,7 +2,7 @@ require 'yaml'
 require 'active_support/inflector'
 
 class Project
-  attr_accessor :challenges, :description, :download, :full_description, :full_page, :image, :instructions, :name, :platforms, :screenshots, :url, :youtube_id
+  attr_accessor :challenges, :credits, :description, :download, :full_description, :full_page, :image, :instructions, :name, :platforms, :screenshots, :url, :youtube_id
 
   class << self
     def all
