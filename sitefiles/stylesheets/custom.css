@@ -1,9 +1,31 @@
 .row {
   margin-top:2%;
+  margin-left: 0;
 }
 
 .play {
   font-size:1.7em;
+}
+
+.project {
+  border-bottom: 1px solid #ccc;
+  padding-bottom:20px;
+}
+
+.img-link {
+  display: block;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.img-link img {
+  width: 100%;
+}
+
+.container {
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
 }
 
 @media screen and (max-width: 500px) {
