@@ -3,6 +3,12 @@
   margin-left: 0;
 }
 
+h1 {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5%;
+}
+
 .play {
   font-size:1.7em;
 }
