@@ -1,6 +1,5 @@
 class Presskit
-  attr_accessor :creators,
-    :description,
+  attr_accessor :description,
     :download_images,
     :images,
     :platforms

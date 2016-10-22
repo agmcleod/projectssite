@@ -70,4 +70,12 @@ class Project
   def presskit?
     self.presskit
   end
+
+  def presskit_url
+    "#{presskit_slug}/index.html"
+  end
+
+  def presskit_slug
+    url.gsub('/', '')
+  end
 end

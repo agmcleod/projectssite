@@ -20,10 +20,10 @@
         %img{src: "../images/#{image_path}"}
 
   %p
-    %a{href: "../images/#{download_images}"} Download Full Resolution Images
+    %a{href: "../images/#{project.presskit.download_images}"} Download Full Resolution Images
 
-  %h3 Creators
+  %h3 Credits
 
   %ul
-    - project.presskit.creators.each do |creator|
-      %li= creator
+    - project.credits.each do |name|
+      %li= name
