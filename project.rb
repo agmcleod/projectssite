@@ -71,8 +71,12 @@ class Project
     self.presskit
   end
 
+  def presskit_folder
+    "presskits/#{presskit_slug}"
+  end
+
   def presskit_url
-    "#{presskit_slug}/index.html"
+    "#{presskit_folder}/index.html"
   end
 
   def presskit_slug

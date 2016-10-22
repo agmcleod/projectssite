@@ -39,7 +39,7 @@ task :presskits, [:copy_assets] do |t, args|
       Haml::Engine.new(File.read('sitefiles/presskit.haml')).render(Object.new, project: project)
     end
 
-    FileUtils.mkdir_p("build/#{project.presskit_slug}")
+    FileUtils.mkdir_p("build/#{project.presskit_folder}")
     File.open("build/#{project.presskit_url}", "w+") do |f|
       f.write rendered_html
     end
