@@ -1,8 +1,22 @@
 require 'yaml'
 require 'active_support/inflector'
+require_relative 'presskit'
 
 class Project
-  attr_accessor :challenges, :credits, :description, :download, :full_description, :full_page, :image, :instructions, :name, :platforms, :screenshots, :url, :youtube_id
+  attr_accessor :challenges,
+    :credits,
+    :description,
+    :download,
+    :full_description,
+    :full_page,
+    :image,
+    :instructions,
+    :name,
+    :platforms,
+    :presskit,
+    :screenshots,
+    :url,
+    :youtube_id
 
   class << self
     def all
@@ -12,11 +26,20 @@ class Project
         Project.new vars
       end
     end
+
+    def presskits
+      data = self.all
+      data.select{ |project| project.presskit? }
+    end
   end
 
   def initialize(attrs = {})
     attrs.each do |k, v|
-      send("#{k}=".to_sym, v)
+      if k == :presskit
+        self.presskit = Presskit.new(v)
+      else
+        send("#{k}=".to_sym, v)
+      end
     end
 
     if self.full_page.nil?
@@ -44,7 +67,7 @@ class Project
     !instructions.nil? && instructions != ''
   end
 
-  def slug
-    "project/#{ActiveSupport::Inflector.parameterize(name)}"
+  def presskit?
+    self.presskit
   end
 end

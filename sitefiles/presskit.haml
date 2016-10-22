@@ -1,0 +1,29 @@
+%h1= project.name
+
+.container
+  %h3 About
+
+  - project.presskit.description.split(/\n{2,}/).each do |bit|
+    %p= bit
+
+  %h3 Platforms
+
+  %ul
+    - project.presskit.platforms.each do |platform|
+      %li= platform
+
+  %h3 Images
+
+  %ul.images
+    - project.presskit.images.each do |image_path|
+      %li
+        %img{src: "../images/#{image_path}"}
+
+  %p
+    %a{href: "../images/#{download_images}"} Download Full Resolution Images
+
+  %h3 Creators
+
+  %ul
+    - project.presskit.creators.each do |creator|
+      %li= creator

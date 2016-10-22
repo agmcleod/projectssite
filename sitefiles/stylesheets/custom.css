@@ -34,6 +34,15 @@ h1 {
   margin:0 auto;
 }
 
+.images {
+  list-style: none;
+}
+
+.images li {
+  display: inline-block;
+  max-width: 300px;
+}
+
 @media screen and (max-width: 500px) {
   .row {
     margin-top:0;

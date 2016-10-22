@@ -13,3 +13,4 @@
 # Ignore Sass' cache
 /.sass-cache
 data.yml
+.DS_Store
