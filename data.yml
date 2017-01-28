@@ -1,0 +1,100 @@
+---
+- :name: Search For Hope
+  :url: /searchforhope
+  :description: "This game started out as an entry for Ludum Dare 29. Over the past year, I continued to work on it further. I wanted to build a game that didn't emphasize violence as a solution. Enemies can be more avoided instead of killed. So I made the game interesting by adding a requirement of timing and accuracy. The game has a steadily improving mood with its environment. The idea that there is hope, and that you are getting warmer."
+  :challenges:
+    - The main challenge I found with this game was getting the dash mechanic working properly. While I couldn't perfect it, it wasn't something I wanted to remove either. It allowed me to have more skill-based level design, rather than simple jump platforms. It also gave me a further range of height to the levels. An imperfect design gave me more flexibility in the game flow itself.
+    - The next challenge I ran into was improving details in the art of the game. It can be difficult to improve your own game art without picturing the improvements properly. To overcome this problem, I looked at examples from games that I admired that had a similar style. Starbound, bits of Aladdin from sega genesis, and Minecraft.
+
+  :image: sfh.png
+- :name: Wrath of the Cube
+  :url: /wrathofthecube
+  :description: "A top down action game built using BabylonJS for both Desktop & Mobile."
+  :image: wotc.png
+  :challenges:
+    - Performance with this project was initially a large issue. I originally built the game using ThreeJS, along with PhysiJS for the physics. When testing on mobile the framerate was just awful. I tried reducing the physics calculation rate, but it didn't help. When I tested PhysiJS examples on my phone, the same performance problem was present. I then tested physics examples with BabylonJS, and they ran quite well. Given I could not find other physics plugins or integrations with ThreeJS, converting to use Babylon was my best option. It took me a couple weeks working on it part time, but I got it done. Now it runs great, and looks better too.
+    - The other challenge was getting the controls on mobile feeling right. I tried a few different schemes. The first was having both sides of the screen work as directional joysticks. So you touch, and drag in a direction to move in that direction. The right side would have you shoot in that direction. In my own playtesting it felt too complicated and tricky to maneuver. What I ended up with was keeping the left side as it was for movement. I changed the right side to a simple tap & hold, so the shoot mechanic auto targets.
+- :name: Keepsake - GGJ 2014
+  :url: /ggj2014.jar
+  :description: "A visual novel I worked on with a few others for global game jam 2014. I had worked with the Tyler before from GGJ 2013, he had a couple friends that were interested this time around. Because the artist didn't have much experience with animation, we dicided to use art stills and build an interactive novel instead."
+  :instructions: Download the .jar file, and double click it to play.
+  :image: keepsake.png
+  :download: true
+  :credits:
+    - Aaron McLeod - Programmer
+    - Jake Butineau - Audio
+    - Sarah El-Sherbini - Art
+    - Tyler Akey - Game Design & Story
+- :name: LD28 - Perfect Christmas
+  :url: /ld28
+  :description: An interactive christmas card to my family. I really stretched the theme on this one, but making a small game for my family for Christmas was something I really wanted to do. The game was broken into three parts, one for each member to play. The first part was for my brother, as he drives a long way to see us. The second part was a simple hidden objects game, as my mom often gets all the groceries and shopping done. The third was for my dad to chop down a nice christmas tree, as he always made sure to get us a nice tree.
+  :image: ld28.png
+- :name: Navigate - a mobile device motion demo
+  :url: /navigate
+  :description: Small example using device motion. Try it on your phone. Be sure to rotate it so the top of your phone is in your left hand, bottom in your right. This was built to test mechanics for snowball effect, which originally only supported arrow keys. The link for it now has proper device controls.
+  :image: navigate.png
+- :name: Snowball Effect
+  :url: /snowballeffect
+  :credits:
+    - Aaron McLeod
+    - Music done by Jake Butineau
+  :description: You are a snowball. Run into things to get bigger and crush the skiing
+    chalet.
+  :presskit:
+    description: Snowball Effect v2 update is a complete overhaul of the existing game. To address a number of design issues I started revitilizing
+      the overall feel of the game. Instead of being very level & objective based game, Snowball Effect is now an infinite runner, with the feel
+      of old racing games from the NES era. You need to move to dodge obstacles, and to collide into objects that give you resources.
+
+      The objective of the game is to get as far as you can, completing challenges to unlock new abilities. As you collect coins,
+      you can also buy items to increase your chances of survival. The game is out for both iOS & Android at the free tier.
+      It contains in app purchases of a cosmetic nature.
+    platforms:
+      iOS: https://itunes.apple.com/us/app/the-snowball-effect/id889050422?mt=8
+      Android: https://play.google.com/store/apps/details?id=com.agmcleod.snowballeffect2
+    images:
+      - snowballeffect/menu-screen.png
+      - snowballeffect/store.png
+      - snowballeffect/game-screen1.png
+      - snowballeffect/super-prompt.png
+      - snowballeffect/super-mode.png
+      - snowballeffect/night.png
+      - snowballeffect/rock.png
+      - snowballeffect/pixelball.png
+      - snowballeffect/bowlingball.png
+      - snowballeffect/8ball.png
+    download_images: snowballeffect/images.zip
+    video: https://www.youtube.com/embed/N70I3HLYIec
+
+  :image: snowballeffect.png
+- :name: 7 Day FPS 2013
+  :url: /7dfps2013
+  :description: Tried making something with Three.JS. Didn't get too far, but it was
+    fun!
+  :image: 7dfps2013.png
+- :name: LD27 - The limits of light
+  :url: /ld27
+  :description: Collection game I made for Ludum Dare 27. The game is constantly
+    dark. But you can trigger a flicker light for a few seconds to see your way.
+  :image: ld27.png
+- :name: Ultimate Roadie
+  :url: /ultimate-roadie
+  :description: "After a metal concert, you're in charge of getting all the gear into the truck. Dont miss!"
+  :image: ultimate-roadie.png
+- :name: LudumDare 26
+  :url: /ld26.jar
+  :description: Game based off the mechanics of missle defense. Stop projectiles from hitting your potato!
+  :instructions: Download the jar file, and double click it to run. Built with Java 1.8
+  :download: true
+  :image: ld26.png
+- :name: Global Game Jam 2013
+  :url: /ggj2013
+  :image: ggj2013.png
+  :description: Top down action game that I made with a few others for the global
+    game jam in 2013. The idea is to get as a high of a score as you can before losing all your hp.
+  :challenges:
+    - Me being new to MelonJS, and the fact it was a young game engine at the time meant it lacked features. I found myself figuring out how to implement simple audio features like volume changing in mid song, chaining tracks together more smoothly, etc. HTML5 as a platform is stronger now than early 2013, plus I was quite new to it. Overcame these issues by cutting features and changes that would be more risky.
+  :credits:
+    - Aaron McLeod - Programmer
+    - Anthony Wong - Project lead & assisted art
+    - Evan Doherty - Art
+    - Tyler Akey - Audio

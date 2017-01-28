@@ -3,14 +3,24 @@
 .container
   %h3 About
 
-  - project.presskit.description.split(/\n{2,}/).each do |bit|
+  - project.presskit.description.split(/\n+/).each do |bit|
     %p= bit
 
   %h3 Platforms
 
   %ul
-    - project.presskit.platforms.each do |platform|
-      %li= platform
+    - project.presskit.platforms.each do |platform, link|
+      %li
+        %a{href: link}= platform
+
+  - if project.presskit.video
+    %h3 Trailer
+
+    %iframe{ id: "ytplayer", type: "text/html",
+      src: project.presskit.video,
+      width: 560, height: 315,
+      frameborder: 0 }
+
 
   %h3 Images
 

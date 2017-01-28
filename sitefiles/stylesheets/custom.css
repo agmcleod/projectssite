@@ -36,11 +36,13 @@ h1 {
 
 .images {
   list-style: none;
+  margin:0 ;
 }
 
 .images li {
   display: inline-block;
   max-width: 300px;
+  margin: 0 5px 5px 0;
 }
 
 @media screen and (max-width: 500px) {
