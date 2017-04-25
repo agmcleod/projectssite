@@ -14,7 +14,6 @@ task :build do
   FileUtils.mkdir_p('build')
 
   Rake::Task['projects'].invoke(false)
-  Rake::Task['presskits'].invoke(false)
   copy_assets
 end
 
@@ -27,22 +26,6 @@ task :projects, [:copy_assets] do |t, args|
 
   File.open("build/index.html", "w+") do |f|
     f.write rendered_html
-  end
-  copy_assets if ca
-end
-
-task :presskits, [:copy_assets] do |t, args|
-  ca = args[:copy_assets] != false
-  lf = File.read('sitefiles/layouts/presskit.haml')
-  Project.presskits.each do |project|
-    rendered_html = Haml::Engine.new(lf).render do
-      Haml::Engine.new(File.read('sitefiles/presskit.haml')).render(Object.new, project: project)
-    end
-
-    FileUtils.mkdir_p("build/#{project.presskit_folder}")
-    File.open("build/#{project.presskit_url}", "w+") do |f|
-      f.write rendered_html
-    end
   end
   copy_assets if ca
 end

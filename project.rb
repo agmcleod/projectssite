@@ -1,22 +1,15 @@
 require 'yaml'
 require 'active_support/inflector'
-require_relative 'presskit'
 
 class Project
   attr_accessor :challenges,
     :credits,
     :description,
     :download,
-    :full_description,
-    :full_page,
     :image,
     :instructions,
     :name,
-    :platforms,
-    :presskit,
-    :screenshots,
-    :url,
-    :youtube_id
+    :url
 
   class << self
     def all
@@ -26,24 +19,11 @@ class Project
         Project.new vars
       end
     end
-
-    def presskits
-      data = self.all
-      data.select{ |project| project.presskit? }
-    end
   end
 
   def initialize(attrs = {})
     attrs.each do |k, v|
-      if k == :presskit
-        self.presskit = Presskit.new(v)
-      else
-        send("#{k}=".to_sym, v)
-      end
-    end
-
-    if self.full_page.nil?
-      self.full_page = false
+      send("#{k}=".to_sym, v)
     end
   end
 
@@ -55,31 +35,11 @@ class Project
     download
   end
 
-  def full_page?
-    full_page
-  end
-
   def image?
     !image.nil? && image != ''
   end
 
   def instructions?
     !instructions.nil? && instructions != ''
-  end
-
-  def presskit?
-    self.presskit
-  end
-
-  def presskit_folder
-    "presskits/#{presskit_slug}"
-  end
-
-  def presskit_url
-    "#{presskit_folder}/index.html"
-  end
-
-  def presskit_slug
-    url.gsub('/', '')
   end
 end
