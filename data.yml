@@ -1,4 +1,15 @@
 ---
+- :name: The Catalyst Document
+  :url: https://agmcleod.itch.io/the-catalyst-document
+  :description: Made this game using the Godot engine. I've been wanting to try it for a while, and a 1 month game jam came up, so I figured I'd give it a go. The game is a top down action/puzzle game. A bit of a sci fi old school zelda. Was pretty impressive how much I could get done in just a couple of weeks by using Godot. While wanting to learn an engine, I also wanted to prototype some thoughts I had on making a game that is top down and involves hacking of sorts. See what systems one can integrate with each other. Though I admittedly didn't take the game quite that far this time.
+  :image: thecatalystdocument.png
+- :name: Energy Grid
+  :url: https://ldjam.com/events/ludum-dare/39/energy-grid
+  :description: "Wanting to flex my Rust muscles more, using it to make a game. I took code from another prototype for basic rendering and input handling, and made a resource management game. While the ludum dare page has the builds I submitted, I have been since working on improving the design of the game. I'm looking to improve its short comings, give the user more options and more interesting scenarios."
+  :image: energygrid.png
+  :challenges:
+    - Figuring out audio & text rendering was tricky in the period of 48 hours. Rust has some good options for this, but due to the nature of thread & memory safety, it was tricky to figure out how to integrate this with the ECS i'm using.
+    - Creating a windows binary was pretty straight forward, mac on the other hand not so. The path of an executable in a MacOS .app file is not local to where the binary file itself sits. So loading assets was an issue. I was able to reference some other projects the Rust community has done to figure this out. Which was a matter of computing the path, and using that to load all assets.
 - :name: Last Resort
   :url: https://agmcleod.itch.io/lastresort
   :description: "I decided to do a collection game in space for the LibGDX game jam. The idea here is you collect the parts required around the map, and bring them to the station in the middle. This is one of the first games that I built using an entity component system. Made me very appreciative of this pattern."
