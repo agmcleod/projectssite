@@ -9,7 +9,7 @@
   :image: energygrid.png
   :challenges:
     - Figuring out audio & text rendering was tricky in the period of 48 hours. Rust has some good options for this, but due to the nature of thread & memory safety, it was tricky to figure out how to integrate this with the ECS i'm using.
-    - Creating a windows binary was pretty straight forward, mac on the other hand not so. The path of an executable in a MacOS .app file is not local to where the binary file itself sits. So loading assets was an issue. I was able to reference some other projects the Rust community has done to figure this out. Which was a matter of computing the path, and using that to load all assets.
+    - Creating a windows binary was pretty straight forward. Creating one for MacOS however was difficult. The path of an executable in a MacOS .app file is not local to where the binary file itself sits. This led to a problem of loading the audio & image files the game was using. I was able to reference some other projects the Rust community has done to figure this out. Which was a matter of computing the path, and using that to load all assets.
 - :name: Last Resort
   :url: https://agmcleod.itch.io/lastresort
   :description: "I decided to do a collection game in space for the LibGDX game jam. The idea here is you collect the parts required around the map, and bring them to the station in the middle. This is one of the first games that I built using an entity component system. Made me very appreciative of this pattern."

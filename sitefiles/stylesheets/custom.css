@@ -13,9 +13,27 @@ h1 {
   font-size:1.7em;
 }
 
+.rightAligned {
+  text-align: right;
+}
+
 .project {
   border-bottom: 1px solid #ccc;
   padding-bottom:20px;
+}
+
+.project h2 {
+  margin: 20px 0;
+}
+
+.project p {
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+.project h4 {
+  margin: 20px 0;
+  font-size: 20px;
 }
 
 .img-link {
@@ -43,6 +61,12 @@ h1 {
   display: inline-block;
   max-width: 300px;
   margin: 0 5px 5px 0;
+}
+
+.sideBySide {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
 }
 
 @media screen and (max-width: 500px) {
