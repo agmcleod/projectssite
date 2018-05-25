@@ -67,10 +67,6 @@
   :description: Collection game I made for Ludum Dare 27. The game is constantly
     dark. But you can trigger a flicker light for a few seconds to see your way.
   :image: ld27.png
-- :name: Ultimate Roadie
-  :url: /ultimate-roadie
-  :description: "After a metal concert, you're in charge of getting all the gear into the truck. Dont miss!"
-  :image: ultimate-roadie.png
 - :name: LudumDare 26
   :url: /ld26.jar
   :description: Game based off the mechanics of missle defense. Stop projectiles from hitting your potato!
